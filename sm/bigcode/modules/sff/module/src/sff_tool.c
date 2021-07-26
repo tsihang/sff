@@ -92,7 +92,7 @@ sff_tool(int argc, char* argv[])
         for (i = 0; i < num; i ++) {
             //sff_db_entry_struct(se, &aim_pvs_stdout);
             char fname[PATH_MAX];
-            snprintf(fname, PATH_MAX, "./idprom%d.txt", i);
+            snprintf(fname, PATH_MAX, "./idprom%02d.txt", i);
             sff_eeprom_to_file((uint8_t *)&entry[i].se.eeprom[0], 256, fname);
         }
         return 0;
