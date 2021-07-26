@@ -120,6 +120,8 @@ typedef enum sff_module_type_e {
     SFF_MODULE_TYPE_25G_BASE_SR,
     SFF_MODULE_TYPE_25G_BASE_LR,
     SFF_MODULE_TYPE_25G_BASE_AOC,
+    /* added 10GBase AOC, by tsihang, 2021-07-26. */
+    SFF_MODULE_TYPE_10G_BASE_AOC,
     SFF_MODULE_TYPE_10G_BASE_SR,
     SFF_MODULE_TYPE_10G_BASE_LR,
     SFF_MODULE_TYPE_10G_BASE_LRM,
@@ -169,6 +171,7 @@ typedef enum sff_module_type_e {
     "25G_BASE_SR", \
     "25G_BASE_LR", \
     "25G_BASE_AOC", \
+    "10G_BASE_AOC", \
     "10G_BASE_SR", \
     "10G_BASE_LR", \
     "10G_BASE_LRM", \
@@ -223,7 +226,7 @@ typedef enum sff_sfp_type_e {
 {\
     "SFP", \
     "QSFP", \
-    "QSFP_PLUS", \
+    "QSFP+", \
     "QSFP28", \
     "SFP28", \
 }

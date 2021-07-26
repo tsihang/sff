@@ -218,6 +218,12 @@ sff_module_type_get(const uint8_t* eeprom)
         && _sff8472_media_cr_passive(eeprom))
         return SFF_MODULE_TYPE_10G_BASE_CR;
 
+    /* added 10GBase AOC, by tsihang, 2021-07-26. */
+    if (SFF8472_MODULE_SFP(eeprom)
+        && _sff8472_sfp_10g_aoc(eeprom)) {
+        return SFF_MODULE_TYPE_10G_BASE_AOC;
+    }
+
     if (SFF8472_MODULE_SFP(eeprom)
         && _sff8472_media_cr_active(eeprom)) {
         if (_sff8472_sfp_10g_aoc(eeprom))
@@ -816,6 +822,7 @@ sff_info_init(sff_info_t* info, sff_module_type_t mt,
             info->caps = SFF_MODULE_CAPS_F_10G;
             break;
 
+        case SFF_MODULE_TYPE_10G_BASE_AOC:
         case SFF_MODULE_TYPE_10G_BASE_SR:
         case SFF_MODULE_TYPE_10G_BASE_LR:
         case SFF_MODULE_TYPE_10G_BASE_LRM:

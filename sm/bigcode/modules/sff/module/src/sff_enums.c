@@ -327,6 +327,8 @@ aim_map_si_t sff_module_type_desc_map[] =
     { "25GBASE-SR", SFF_MODULE_TYPE_25G_BASE_SR },
     { "25GBASE-LR", SFF_MODULE_TYPE_25G_BASE_LR },
     { "25GBASE-AOC", SFF_MODULE_TYPE_25G_BASE_AOC },
+    /* added 10GBase AOC, by tsihang, 2021-07-26. */
+    { "10GBASE-AOC", SFF_MODULE_TYPE_10G_BASE_AOC },
     { "10GBASE-SR", SFF_MODULE_TYPE_10G_BASE_SR },
     { "10GBASE-LR", SFF_MODULE_TYPE_10G_BASE_LR },
     { "10GBASE-LRM", SFF_MODULE_TYPE_10G_BASE_LRM },
@@ -392,7 +394,7 @@ aim_map_si_t sff_sfp_type_map[] =
 {
     { "SFP", SFF_SFP_TYPE_SFP },
     { "QSFP", SFF_SFP_TYPE_QSFP },
-    { "QSFP_PLUS", SFF_SFP_TYPE_QSFP_PLUS },
+    { "QSFP+", SFF_SFP_TYPE_QSFP_PLUS },
     { "QSFP28", SFF_SFP_TYPE_QSFP28 },
     { "SFP28", SFF_SFP_TYPE_SFP28 },
     { NULL, 0 }
